@@ -56,21 +56,25 @@ namespace FormsTest
         {
             while (true)
             {
-                this.CreateGraphics().DrawPolygon(new Pen(Brushes.Green, 5),
-                    new Polygon();
-                    
+                //this.CreateGraphics().DrawPolygon();
                 Thread.Sleep(2000);
             }
         }
 
         private void btnCircle_Click(object sender, EventArgs e)
         {
+            thRect = new Thread(CreateRectangle);
+            thRect.Start();
+        }
+
+        public void CreateCirle()
+        {
 
         }
 
         private void btnStop_Click(object sender, EventArgs e)
         {
-            
+            thRect.Abort();
         }
     }
 }
