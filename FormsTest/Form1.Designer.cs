@@ -36,31 +36,34 @@
             // 
             // btnRectangle
             // 
-            this.btnRectangle.Location = new System.Drawing.Point(12, 116);
+            this.btnRectangle.Location = new System.Drawing.Point(12, 12);
             this.btnRectangle.Name = "btnRectangle";
             this.btnRectangle.Size = new System.Drawing.Size(102, 46);
             this.btnRectangle.TabIndex = 0;
             this.btnRectangle.Text = "Rectangle";
             this.btnRectangle.UseVisualStyleBackColor = true;
+            this.btnRectangle.Click += new System.EventHandler(this.btnRectangle_Click);
             // 
             // btnTriangle
             // 
             this.btnTriangle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTriangle.Location = new System.Drawing.Point(12, 12);
+            this.btnTriangle.Location = new System.Drawing.Point(12, 64);
             this.btnTriangle.Name = "btnTriangle";
             this.btnTriangle.Size = new System.Drawing.Size(102, 46);
             this.btnTriangle.TabIndex = 1;
             this.btnTriangle.Text = "Triangle";
             this.btnTriangle.UseVisualStyleBackColor = true;
+            this.btnTriangle.Click += new System.EventHandler(this.btnTriangle_Click);
             // 
             // btnCircle
             // 
-            this.btnCircle.Location = new System.Drawing.Point(12, 64);
+            this.btnCircle.Location = new System.Drawing.Point(12, 116);
             this.btnCircle.Name = "btnCircle";
             this.btnCircle.Size = new System.Drawing.Size(102, 46);
             this.btnCircle.TabIndex = 2;
             this.btnCircle.Text = "Circle";
             this.btnCircle.UseVisualStyleBackColor = true;
+            this.btnCircle.Click += new System.EventHandler(this.btnCircle_Click);
             // 
             // btnStop
             // 
@@ -70,6 +73,7 @@
             this.btnStop.TabIndex = 3;
             this.btnStop.Text = "Stop";
             this.btnStop.UseVisualStyleBackColor = true;
+            this.btnStop.Click += new System.EventHandler(this.btnStop_Click);
             // 
             // Form1
             // 
