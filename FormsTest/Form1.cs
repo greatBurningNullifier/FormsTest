@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
+using System.Security.Cryptography;
 
 namespace FormsTest
 {
@@ -18,10 +19,13 @@ namespace FormsTest
             InitializeComponent();
         }
 
-        public Random randomRectHeight = new Random();
-        public Random randomRectWidth = new Random();
+        //public Random randomRectHeight = new Random();
+        //public Random randomRectWidth = new Random();
         public Random randomRectPosition = new Random();
+        public Random randomTriPosition = new Random();
         Thread thRect;
+        Thread thTri;
+        Thread thCir;
 
         private void btnRectangle_Click(object sender, EventArgs e)
         {
@@ -33,7 +37,7 @@ namespace FormsTest
         {
             while (true)
             {
-                this.CreateGraphics().DrawRectangle(new Pen(Brushes.Red, 4),
+                this.CreateGraphics().DrawRectangle(new Pen(Brushes.Red, 5),
                     new Rectangle(
                     randomRectPosition.Next(0, Width),
                     randomRectPosition.Next(0, Height),
@@ -44,7 +48,19 @@ namespace FormsTest
 
         private void btnTriangle_Click(object sender, EventArgs e)
         {
+            thTri = new Thread(CreateTriangle);
+            thTri.Start();
+        }
 
+        public void CreateTriangle()
+        {
+            while (true)
+            {
+                this.CreateGraphics().DrawPolygon(new Pen(Brushes.Green, 5),
+                    new Polygon();
+                    
+                Thread.Sleep(2000);
+            }
         }
 
         private void btnCircle_Click(object sender, EventArgs e)
@@ -54,7 +70,7 @@ namespace FormsTest
 
         private void btnStop_Click(object sender, EventArgs e)
         {
-
+            
         }
     }
 }
